@@ -5,7 +5,7 @@ FROM golang:1.15 AS builder
 # RUN chmod +x /usr/bin/dep
 
 # Copy the code from the host and compile it
-WORKDIR $GOPATH/src/github.com/kubesail/qotm
+WORKDIR $GOPATH/src/github.com/parkingcams/gotest
 COPY . ./
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix nocgo -o /app .
 
